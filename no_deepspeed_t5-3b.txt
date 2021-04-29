@@ -1,0 +1,134 @@
+You're running a t5 model but didn't provide a source prefix, which is expected, e.g. with `--source_prefix 'translate English to German: ' `
+https://huggingface.co/t5-3b/resolve/main/config.json not found in cache or force_download set to True, downloading to /root/.cache/huggingface/transformers/tmpdrvcqhff
+Downloading:   0%|          | 0.00/1.20k [00:00<?, ?B/s]Downloading: 100%|██████████| 1.20k/1.20k [00:00<00:00, 1.73MB/s]
+storing https://huggingface.co/t5-3b/resolve/main/config.json in cache at /root/.cache/huggingface/transformers/9548aafe2574163cda830b603f9821f06bbded327f57ecf09d4ad292d00f4b09.9872b28381f35eb45b1f1f839ef14943e64a0a448f611993c2e987c4d3e0844c
+creating metadata file for /root/.cache/huggingface/transformers/9548aafe2574163cda830b603f9821f06bbded327f57ecf09d4ad292d00f4b09.9872b28381f35eb45b1f1f839ef14943e64a0a448f611993c2e987c4d3e0844c
+loading configuration file https://huggingface.co/t5-3b/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/9548aafe2574163cda830b603f9821f06bbded327f57ecf09d4ad292d00f4b09.9872b28381f35eb45b1f1f839ef14943e64a0a448f611993c2e987c4d3e0844c
+Model config T5Config {
+  "architectures": [
+    "T5WithLMHeadModel"
+  ],
+  "d_ff": 16384,
+  "d_kv": 128,
+  "d_model": 1024,
+  "decoder_start_token_id": 0,
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "relu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 24,
+  "num_heads": 32,
+  "num_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "transformers_version": "4.6.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+loading configuration file https://huggingface.co/t5-3b/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/9548aafe2574163cda830b603f9821f06bbded327f57ecf09d4ad292d00f4b09.9872b28381f35eb45b1f1f839ef14943e64a0a448f611993c2e987c4d3e0844c
+Model config T5Config {
+  "architectures": [
+    "T5WithLMHeadModel"
+  ],
+  "d_ff": 16384,
+  "d_kv": 128,
+  "d_model": 1024,
+  "decoder_start_token_id": 0,
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "relu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 24,
+  "num_heads": 32,
+  "num_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "transformers_version": "4.6.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+https://huggingface.co/t5-3b/resolve/main/spiece.model not found in cache or force_download set to True, downloading to /root/.cache/huggingface/transformers/tmphg97n32o
+Downloading:   0%|          | 0.00/792k [00:00<?, ?B/s]Downloading:  13%|█▎        | 102k/792k [00:00<00:00, 989kB/s]Downloading:  28%|██▊       | 225k/792k [00:00<00:00, 1.04MB/s]Downloading:  53%|█████▎    | 418k/792k [00:00<00:00, 1.20MB/s]Downloading:  88%|████████▊ | 700k/792k [00:00<00:00, 1.43MB/s]Downloading: 100%|██████████| 792k/792k [00:00<00:00, 1.79MB/s]
+storing https://huggingface.co/t5-3b/resolve/main/spiece.model in cache at /root/.cache/huggingface/transformers/529487bfb232bc6331b488e0e3f011af7d700beb874529a38613f0c162994f36.3b69006860e7b5d0a63ffdddc01ddcd6b7c318a6f4fd793596552c741734c62d
+creating metadata file for /root/.cache/huggingface/transformers/529487bfb232bc6331b488e0e3f011af7d700beb874529a38613f0c162994f36.3b69006860e7b5d0a63ffdddc01ddcd6b7c318a6f4fd793596552c741734c62d
+https://huggingface.co/t5-3b/resolve/main/tokenizer.json not found in cache or force_download set to True, downloading to /root/.cache/huggingface/transformers/tmp4fo98769
+Downloading:   0%|          | 0.00/1.39M [00:00<?, ?B/s]Downloading:   8%|▊         | 111k/1.39M [00:00<00:01, 1.07MB/s]Downloading:  22%|██▏       | 303k/1.39M [00:00<00:00, 1.23MB/s]Downloading:  40%|████      | 561k/1.39M [00:00<00:00, 1.46MB/s]Downloading:  65%|██████▌   | 905k/1.39M [00:00<00:00, 1.75MB/s]Downloading:  99%|█████████▉| 1.38M/1.39M [00:00<00:00, 2.13MB/s]Downloading: 100%|██████████| 1.39M/1.39M [00:00<00:00, 2.66MB/s]
+storing https://huggingface.co/t5-3b/resolve/main/tokenizer.json in cache at /root/.cache/huggingface/transformers/8cc0c6618e070737993bd96f1f5251e1cc850a347fa1ff28c378c89c66e66c80.8627f1bd5d270a9fd2e5a51c8bec3223896587cc3cfe13edeabb0992ab43c529
+creating metadata file for /root/.cache/huggingface/transformers/8cc0c6618e070737993bd96f1f5251e1cc850a347fa1ff28c378c89c66e66c80.8627f1bd5d270a9fd2e5a51c8bec3223896587cc3cfe13edeabb0992ab43c529
+loading file https://huggingface.co/t5-3b/resolve/main/spiece.model from cache at /root/.cache/huggingface/transformers/529487bfb232bc6331b488e0e3f011af7d700beb874529a38613f0c162994f36.3b69006860e7b5d0a63ffdddc01ddcd6b7c318a6f4fd793596552c741734c62d
+loading file https://huggingface.co/t5-3b/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/8cc0c6618e070737993bd96f1f5251e1cc850a347fa1ff28c378c89c66e66c80.8627f1bd5d270a9fd2e5a51c8bec3223896587cc3cfe13edeabb0992ab43c529
+loading file https://huggingface.co/t5-3b/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/t5-3b/resolve/main/special_tokens_map.json from cache at None
+loading file https://huggingface.co/t5-3b/resolve/main/tokenizer_config.json from cache at None
+https://huggingface.co/t5-3b/resolve/main/pytorch_model.bin not found in cache or force_download set to True, downloading to /root/.cache/huggingface/transformers/tmpmvlj7dzb
+Downloading:   0%|          | 0.00/11.4G [00:00<?, ?B/s]Downloading:   0%|          | 442k/11.4G [00:00<43:15, 4.39MB/s]Downloading:   0%|          | 2.21M/11.4G [00:00<33:31, 5.67MB/s]Downloading:   0%|          | 4.24M/11.4G [00:00<26:16, 7.23MB/s]Downloading:   0%|          | 6.08M/11.4G [00:00<21:37, 8.79MB/s]Downloading:   0%|          | 7.58M/11.4G [00:00<19:14, 9.88MB/s]Downloading:   0%|          | 9.09M/11.4G [00:00<17:17, 11.0MB/s]Downloading:   0%|          | 10.7M/11.4G [00:00<15:44, 12.1MB/s]Downloading:   0%|          | 12.5M/11.4G [00:00<15:58, 11.9MB/s]Downloading:   0%|          | 15.3M/11.4G [00:00<13:12, 14.4MB/s]Downloading:   0%|          | 17.1M/11.4G [00:01<12:49, 14.8MB/s]Downloading:   0%|          | 19.0M/11.4G [00:01<11:53, 16.0MB/s]Downloading:   0%|          | 20.8M/11.4G [00:01<13:42, 13.8MB/s]Downloading:   0%|          | 22.7M/11.4G [00:01<13:09, 14.4MB/s]Downloading:   0%|          | 24.3M/11.4G [00:01<12:44, 14.9MB/s]Downloading:   0%|          | 25.9M/11.4G [00:01<13:11, 14.4MB/s]Downloading:   0%|          | 27.4M/11.4G [00:01<12:56, 14.7MB/s]Downloading:   0%|          | 29.1M/11.4G [00:01<12:36, 15.0MB/s]

@@ -1,0 +1,151 @@
+You're running a t5 model but didn't provide a source prefix, which is expected, e.g. with `--source_prefix 'translate English to German: ' `
+loading configuration file https://huggingface.co/t5-large/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/1adb1f57c3579debfcce7b94ee03f6144e0ff7a0c2825e48b3f9cde9ce290c7d.35a5d3297357a9ea0fccdf170df8d287f1cad2ee810bca042f98c531c0cab2c6
+Model config T5Config {
+  "architectures": [
+    "T5WithLMHeadModel"
+  ],
+  "d_ff": 4096,
+  "d_kv": 64,
+  "d_model": 1024,
+  "decoder_start_token_id": 0,
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "relu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 24,
+  "num_heads": 16,
+  "num_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "transformers_version": "4.6.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+loading configuration file https://huggingface.co/t5-large/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/1adb1f57c3579debfcce7b94ee03f6144e0ff7a0c2825e48b3f9cde9ce290c7d.35a5d3297357a9ea0fccdf170df8d287f1cad2ee810bca042f98c531c0cab2c6
+Model config T5Config {
+  "architectures": [
+    "T5WithLMHeadModel"
+  ],
+  "d_ff": 4096,
+  "d_kv": 64,
+  "d_model": 1024,
+  "decoder_start_token_id": 0,
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "relu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 24,
+  "num_heads": 16,
+  "num_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "transformers_version": "4.6.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+loading file https://huggingface.co/t5-large/resolve/main/spiece.model from cache at /root/.cache/huggingface/transformers/71ee551f54e246045a7b94dd449c33759924b864712e6d235bbba5245c9f6296.3b69006860e7b5d0a63ffdddc01ddcd6b7c318a6f4fd793596552c741734c62d
+loading file https://huggingface.co/t5-large/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/276094e085ecb12227136f2e755dc1f68be6f5da32df55ebfb104c791fbbc3c1.8627f1bd5d270a9fd2e5a51c8bec3223896587cc3cfe13edeabb0992ab43c529
+loading file https://huggingface.co/t5-large/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/t5-large/resolve/main/special_tokens_map.json from cache at None
+loading file https://huggingface.co/t5-large/resolve/main/tokenizer_config.json from cache at None
+loading weights file https://huggingface.co/t5-large/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/750feca8cedcd171eb121bd47c3ae16924a473d89f334c7d22f83bfa3a6c80f6.62fbd66ec15bdf6e5322f44f1546f0d475cf07a90caca0912ead31408a83a319
+All model checkpoint weights were used when initializing T5ForConditionalGeneration.
+
+All the weights of T5ForConditionalGeneration were initialized from the model checkpoint at t5-large.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use T5ForConditionalGeneration for predictions without further training.
+  0%|          | 0/1 [00:00<?, ?ba/s]100%|██████████| 1/1 [00:00<00:00, 43.82ba/s]
+Using amp fp16 backend
+***** Running training *****
+  Num examples = 500
+  Num Epochs = 1
+  Instantaneous batch size per device = 1
+  Total train batch size (w. parallel, distributed & accumulation) = 1
+  Gradient Accumulation steps = 1
+  Total optimization steps = 500
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 1/500 [00:01<08:30,  1.02s/it]  0%|          | 2/500 [00:01<06:19,  1.31it/s]  1%|          | 3/500 [00:01<04:48,  1.72it/s]  1%|          | 4/500 [00:01<03:42,  2.23it/s]  1%|          | 5/500 [00:01<02:58,  2.77it/s]  1%|          | 6/500 [00:01<02:27,  3.35it/s]  1%|▏         | 7/500 [00:01<02:07,  3.86it/s]  2%|▏         | 8/500 [00:02<01:52,  4.36it/s]  2%|▏         | 9/500 [00:02<01:43,  4.76it/s]Traceback (most recent call last):
+  File "transformers/examples/pytorch/translation/run_translation.py", line 588, in <module>
+    main()
+  File "transformers/examples/pytorch/translation/run_translation.py", line 521, in main
+    train_result = trainer.train(resume_from_checkpoint=checkpoint)
+  File "/workspace/transformers/src/transformers/trainer.py", line 1281, in train
+    self.scaler.step(self.optimizer)
+  File "/opt/conda/lib/python3.8/site-packages/torch/cuda/amp/grad_scaler.py", line 333, in step
+    retval = optimizer.step(*args, **kwargs)
+  File "/opt/conda/lib/python3.8/site-packages/torch/optim/lr_scheduler.py", line 65, in wrapper
+    return wrapped(*args, **kwargs)
+  File "/opt/conda/lib/python3.8/site-packages/torch/optim/optimizer.py", line 89, in wrapper
+    return func(*args, **kwargs)
+  File "/workspace/transformers/src/transformers/optimization.py", line 336, in step
+    state["exp_avg_sq"] = torch.zeros_like(p.data)
+RuntimeError: CUDA out of memory. Tried to allocate 16.00 MiB (GPU 0; 9.78 GiB total capacity; 7.85 GiB already allocated; 35.25 MiB free; 7.98 GiB reserved in total by PyTorch)
+  2%|▏         | 9/500 [00:02<02:19,  3.53it/s]
