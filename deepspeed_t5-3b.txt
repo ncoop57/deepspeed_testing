@@ -1,0 +1,142 @@
+WARNING:__main__:You're running a t5 model but didn't provide a source prefix, which is expected, e.g. with `--source_prefix 'translate English to German: ' `
+WARNING:__main__:Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: True
+INFO:__main__:Training/evaluation parameters Seq2SeqTrainingArguments(output_dir='output_dir', overwrite_output_dir=True, do_train=True, do_eval=None, do_predict=False, evaluation_strategy=<IntervalStrategy.NO: 'no'>, prediction_loss_only=False, per_device_train_batch_size=1, per_device_eval_batch_size=8, per_gpu_train_batch_size=None, per_gpu_eval_batch_size=None, gradient_accumulation_steps=1, eval_accumulation_steps=None, learning_rate=5e-05, weight_decay=0.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, warmup_ratio=0.0, warmup_steps=0, logging_dir='runs/Apr29_23-37-56_5b1f54a2afa7', logging_strategy=<IntervalStrategy.STEPS: 'steps'>, logging_first_step=False, logging_steps=500, save_strategy=<IntervalStrategy.STEPS: 'steps'>, save_steps=500, save_total_limit=None, no_cuda=False, seed=42, fp16=True, fp16_opt_level='O1', fp16_backend='auto', fp16_full_eval=False, local_rank=0, tpu_num_cores=None, tpu_metrics_debug=False, debug=False, dataloader_drop_last=False, eval_steps=500, dataloader_num_workers=0, past_index=-1, run_name='output_dir', disable_tqdm=False, remove_unused_columns=True, label_names=None, load_best_model_at_end=False, metric_for_best_model=None, greater_is_better=None, ignore_data_skip=False, sharded_ddp=[], deepspeed='transformers/tests/deepspeed/ds_config_zero2.json', label_smoothing_factor=0.0, adafactor=False, group_by_length=False, length_column_name='length', report_to=['tensorboard'], ddp_find_unused_parameters=None, dataloader_pin_memory=True, skip_memory_metrics=False, use_legacy_prediction_loop=False, push_to_hub=False, mp_parameters='', sortish_sampler=False, predict_with_generate=False)
+WARNING:datasets.builder:Reusing dataset wmt16 (/root/.cache/huggingface/datasets/wmt16/ro-en/1.0.0/0d9fb3e814712c785176ad8cdb9f465fbe6479000ee6546725db30ad8a8b5f8a)
+loading configuration file https://huggingface.co/t5-3b/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/9548aafe2574163cda830b603f9821f06bbded327f57ecf09d4ad292d00f4b09.9872b28381f35eb45b1f1f839ef14943e64a0a448f611993c2e987c4d3e0844c
+Model config T5Config {
+  "architectures": [
+    "T5WithLMHeadModel"
+  ],
+  "d_ff": 16384,
+  "d_kv": 128,
+  "d_model": 1024,
+  "decoder_start_token_id": 0,
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "relu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 24,
+  "num_heads": 32,
+  "num_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "transformers_version": "4.6.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+loading configuration file https://huggingface.co/t5-3b/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/9548aafe2574163cda830b603f9821f06bbded327f57ecf09d4ad292d00f4b09.9872b28381f35eb45b1f1f839ef14943e64a0a448f611993c2e987c4d3e0844c
+Model config T5Config {
+  "architectures": [
+    "T5WithLMHeadModel"
+  ],
+  "d_ff": 16384,
+  "d_kv": 128,
+  "d_model": 1024,
+  "decoder_start_token_id": 0,
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "relu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 24,
+  "num_heads": 32,
+  "num_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "transformers_version": "4.6.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+loading file https://huggingface.co/t5-3b/resolve/main/spiece.model from cache at /root/.cache/huggingface/transformers/529487bfb232bc6331b488e0e3f011af7d700beb874529a38613f0c162994f36.3b69006860e7b5d0a63ffdddc01ddcd6b7c318a6f4fd793596552c741734c62d
+loading file https://huggingface.co/t5-3b/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/8cc0c6618e070737993bd96f1f5251e1cc850a347fa1ff28c378c89c66e66c80.8627f1bd5d270a9fd2e5a51c8bec3223896587cc3cfe13edeabb0992ab43c529
+loading file https://huggingface.co/t5-3b/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/t5-3b/resolve/main/special_tokens_map.json from cache at None
+loading file https://huggingface.co/t5-3b/resolve/main/tokenizer_config.json from cache at None
+loading weights file https://huggingface.co/t5-3b/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/289687014f876f6cef27445bdc8175fd03dc36a99201b68d8e925957e4987b4f.885f97e8ec826518534b45f8b52caea4ca553494390d587dcf49492d95732676
+All model checkpoint weights were used when initializing T5ForConditionalGeneration.
+
+All the weights of T5ForConditionalGeneration were initialized from the model checkpoint at t5-3b.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use T5ForConditionalGeneration for predictions without further training.
+  0%|          | 0/1 [00:00<?, ?ba/s]100%|██████████| 1/1 [00:00<00:00, 14.60ba/s]
+Using amp fp16 backend
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/conda/lib/python3.8/site-packages/deepspeed/launcher/launch.py", line 171, in <module>
+    main()
+  File "/opt/conda/lib/python3.8/site-packages/deepspeed/launcher/launch.py", line 161, in main
+    sigkill_handler(signal.SIGTERM, None)  # not coming back
+  File "/opt/conda/lib/python3.8/site-packages/deepspeed/launcher/launch.py", line 139, in sigkill_handler
+    raise subprocess.CalledProcessError(returncode=last_return_code, cmd=cmd)
+subprocess.CalledProcessError: Command '['/opt/conda/bin/python', '-u', 'transformers/examples/pytorch/translation/run_translation.py', '--local_rank=0', '--deepspeed', 'transformers/tests/deepspeed/ds_config_zero2.json', '--model_name_or_path', 't5-3b', '--per_device_train_batch_size', '1', '--output_dir', 'output_dir', '--overwrite_output_dir', '--fp16', '--do_train', '--max_train_samples', '500', '--num_train_epochs', '1', '--dataset_name', 'wmt16', '--dataset_config', 'ro-en', '--source_lang', 'en', '--target_lang', 'ro']' died with <Signals.SIGKILL: 9>.
