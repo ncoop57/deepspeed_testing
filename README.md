@@ -6,9 +6,11 @@ Hi there! This repo contains the accompanying code to my blog post [DeepSpeed In
 To run my experiments make sure you have [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) installed on your machine **(I've only tested this on Ubuntu 20.04)**.
 
 ```
-docker run --gpus all -d -it -v $(pwd):/workspace --name deepspeed pytorch/pytorch:1.8.0-cuda11.1-cudnn8-devel bash
+docker build -t deepspeed .
+docker run --gpus all -d -it -v $(pwd):/workspace --name deepspeed deepspeed bash
 docker exec -it deepspeed bash
-bash test.sh <model_name>
+git clone transformers
+bash test.sh <model_name> <batch_size> --deepspeed # Omit --deepspeed to run the test without it
 ```
 
 I've tested this out with three different models: t5-small, t5-base, t5-large, and t5-3b.
