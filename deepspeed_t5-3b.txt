@@ -1,6 +1,6 @@
 WARNING:__main__:You're running a t5 model but didn't provide a source prefix, which is expected, e.g. with `--source_prefix 'translate English to German: ' `
 WARNING:__main__:Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: True
-INFO:__main__:Training/evaluation parameters Seq2SeqTrainingArguments(output_dir='output_dir', overwrite_output_dir=True, do_train=True, do_eval=None, do_predict=False, evaluation_strategy=<IntervalStrategy.NO: 'no'>, prediction_loss_only=False, per_device_train_batch_size=1, per_device_eval_batch_size=8, per_gpu_train_batch_size=None, per_gpu_eval_batch_size=None, gradient_accumulation_steps=1, eval_accumulation_steps=None, learning_rate=5e-05, weight_decay=0.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, warmup_ratio=0.0, warmup_steps=0, logging_dir='runs/Apr29_23-37-56_5b1f54a2afa7', logging_strategy=<IntervalStrategy.STEPS: 'steps'>, logging_first_step=False, logging_steps=500, save_strategy=<IntervalStrategy.STEPS: 'steps'>, save_steps=500, save_total_limit=None, no_cuda=False, seed=42, fp16=True, fp16_opt_level='O1', fp16_backend='auto', fp16_full_eval=False, local_rank=0, tpu_num_cores=None, tpu_metrics_debug=False, debug=False, dataloader_drop_last=False, eval_steps=500, dataloader_num_workers=0, past_index=-1, run_name='output_dir', disable_tqdm=False, remove_unused_columns=True, label_names=None, load_best_model_at_end=False, metric_for_best_model=None, greater_is_better=None, ignore_data_skip=False, sharded_ddp=[], deepspeed='transformers/tests/deepspeed/ds_config_zero2.json', label_smoothing_factor=0.0, adafactor=False, group_by_length=False, length_column_name='length', report_to=['tensorboard'], ddp_find_unused_parameters=None, dataloader_pin_memory=True, skip_memory_metrics=False, use_legacy_prediction_loop=False, push_to_hub=False, mp_parameters='', sortish_sampler=False, predict_with_generate=False)
+INFO:__main__:Training/evaluation parameters Seq2SeqTrainingArguments(output_dir='output_dir', overwrite_output_dir=True, do_train=True, do_eval=False, do_predict=False, evaluation_strategy=<IntervalStrategy.NO: 'no'>, prediction_loss_only=False, per_device_train_batch_size=1, per_device_eval_batch_size=8, per_gpu_train_batch_size=None, per_gpu_eval_batch_size=None, gradient_accumulation_steps=1, eval_accumulation_steps=None, learning_rate=5e-05, weight_decay=0.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, warmup_ratio=0.0, warmup_steps=0, logging_dir='runs/May09_20-02-45_fed50493e286', logging_strategy=<IntervalStrategy.STEPS: 'steps'>, logging_first_step=False, logging_steps=500, save_strategy=<IntervalStrategy.STEPS: 'steps'>, save_steps=500, save_total_limit=None, no_cuda=False, seed=42, fp16=True, fp16_opt_level='O1', fp16_backend='auto', fp16_full_eval=False, local_rank=0, tpu_num_cores=None, tpu_metrics_debug=False, debug=[], dataloader_drop_last=False, eval_steps=500, dataloader_num_workers=0, past_index=-1, run_name='output_dir', disable_tqdm=False, remove_unused_columns=True, label_names=None, load_best_model_at_end=False, metric_for_best_model=None, greater_is_better=None, ignore_data_skip=False, sharded_ddp=[], deepspeed='transformers/tests/deepspeed/ds_config_zero2.json', label_smoothing_factor=0.0, adafactor=False, group_by_length=False, length_column_name='length', report_to=['tensorboard'], ddp_find_unused_parameters=None, dataloader_pin_memory=True, skip_memory_metrics=False, use_legacy_prediction_loop=False, push_to_hub=False, resume_from_checkpoint=None, mp_parameters='', sortish_sampler=False, predict_with_generate=False)
 WARNING:datasets.builder:Reusing dataset wmt16 (/root/.cache/huggingface/datasets/wmt16/ro-en/1.0.0/0d9fb3e814712c785176ad8cdb9f465fbe6479000ee6546725db30ad8a8b5f8a)
 loading configuration file https://huggingface.co/t5-3b/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/9548aafe2574163cda830b603f9821f06bbded327f57ecf09d4ad292d00f4b09.9872b28381f35eb45b1f1f839ef14943e64a0a448f611993c2e987c4d3e0844c
 Model config T5Config {
@@ -14,6 +14,7 @@ Model config T5Config {
   "dropout_rate": 0.1,
   "eos_token_id": 1,
   "feed_forward_proj": "relu",
+  "gradient_checkpointing": false,
   "initializer_factor": 1.0,
   "is_encoder_decoder": true,
   "layer_norm_epsilon": 1e-06,
@@ -71,6 +72,7 @@ Model config T5Config {
   "dropout_rate": 0.1,
   "eos_token_id": 1,
   "feed_forward_proj": "relu",
+  "gradient_checkpointing": false,
   "initializer_factor": 1.0,
   "is_encoder_decoder": true,
   "layer_norm_epsilon": 1e-06,
@@ -126,7 +128,7 @@ All model checkpoint weights were used when initializing T5ForConditionalGenerat
 
 All the weights of T5ForConditionalGeneration were initialized from the model checkpoint at t5-3b.
 If your task is similar to the task the model of the checkpoint was trained on, you can already use T5ForConditionalGeneration for predictions without further training.
-  0%|          | 0/1 [00:00<?, ?ba/s]100%|██████████| 1/1 [00:00<00:00, 14.60ba/s]
+  0%|          | 0/1 [00:00<?, ?ba/s]100%|██████████| 1/1 [00:00<00:00,  2.52ba/s]100%|██████████| 1/1 [00:00<00:00,  2.51ba/s]
 Using amp fp16 backend
 Traceback (most recent call last):
   File "/opt/conda/lib/python3.8/runpy.py", line 194, in _run_module_as_main
